@@ -1,8 +1,6 @@
 #Importing libraries
 import streamlit as st
 import os
-import pandas as pd
-from joblib import Parallel,delayed
 from modules.file_processing import read, pwd_protect
 from modules.page_render import basic_render
 import time
