@@ -61,3 +61,9 @@ if directory:
 
 else:
     st.error("Enter folder path to continue.")
+
+#Horizontal divider
+st.divider()
+
+#My branding
+st.write("**Created by NivAnalytics - https://www.nivanalytics.com**")
