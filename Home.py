@@ -56,8 +56,8 @@ if directory:
             else:
                 st.error("Error occurred during file encryption. Ensure that PDF documents are present in the folder.")
 
-        except:
-            st.error("Error occurred during file encryption. Ensure that PDF documents are present in the folder.")
+        except Exception as e:
+            st.error(f"Error occurred during file encryption: {e}")
 
 else:
     st.error("Enter folder path to continue.")
