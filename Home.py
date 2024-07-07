@@ -37,8 +37,8 @@ if directory:
                 read(file)
             st.success("All documents have been successfully converted to PDF!")
 
-        except:
-            st.error("Error occured during conversion to PDF.")
+        except Exception as e:
+            st.error(f"Error occurred during conversion to PDF: {e}")
             results=None
 
     #Performs the below only if encrypt pdf button is clicked
@@ -54,10 +54,10 @@ if directory:
                     pwd_protect(file)
                 st.success("PDF documents have been successfully encrypted!")
             else:
-                st.error("Error occured during file encryption. Ensure that PDF documents are present in the folder.")
+                st.error("Error occurred during file encryption. Ensure that PDF documents are present in the folder.")
 
         except:
-            st.error("Error occured during file encryption. Ensure that PDF documents are present in the folder.")
+            st.error("Error occurred during file encryption. Ensure that PDF documents are present in the folder.")
 
 else:
     st.error("Enter folder path to continue.")
